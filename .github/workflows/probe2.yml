@@ -1,0 +1,11 @@
+name: probe2
+on: [push, workflow_dispatch]
+jobs:
+  l:
+    runs-on: ubuntu-latest
+    steps:
+      - run: uname -a && echo linux-ok
+  m:
+    runs-on: macos-14
+    steps:
+      - run: sw_vers && echo mac-ok
